@@ -1,0 +1,6 @@
+framework module Pods_KodingSehatQ {
+  umbrella header "Pods-KodingSehatQ-umbrella.h"
+
+  export *
+  module * { export * }
+}

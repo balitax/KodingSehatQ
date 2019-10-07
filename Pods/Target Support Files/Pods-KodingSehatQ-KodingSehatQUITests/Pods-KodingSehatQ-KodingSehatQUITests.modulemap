@@ -1,0 +1,6 @@
+framework module Pods_KodingSehatQ_KodingSehatQUITests {
+  umbrella header "Pods-KodingSehatQ-KodingSehatQUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

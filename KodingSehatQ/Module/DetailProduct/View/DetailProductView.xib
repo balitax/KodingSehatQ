@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailProductView" customModule="KodingSehatQ" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBuyNow" destination="6XH-Dl-IRW" id="qxf-lt-8S3"/>
+                <outlet property="tableView" destination="kuI-qS-UPN" id="aOQ-MU-Szp"/>
+                <outlet property="textPrice" destination="nUl-6f-gKd" id="Sf4-fp-J95"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kuI-qS-UPN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="781"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iLe-r4-RtQ"/>
+                        <outlet property="delegate" destination="-1" id="dfK-gb-Uq6"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFJ-5W-GZM">
+                    <rect key="frame" x="0.0" y="781" width="414" height="115"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$400,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUl-6f-gKd">
+                            <rect key="frame" x="18" y="45.5" width="86" height="24"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XH-Dl-IRW" customClass="QButton" customModule="KodingSehatQ" customModuleProvider="target">
+                            <rect key="frame" x="246" y="33.5" width="150" height="48"/>
+                            <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="1ns-Jf-cdt"/>
+                                <constraint firstAttribute="height" constant="48" id="5b4-oD-2U9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" title="Buy Now">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                    <real key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="2" height="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="6XH-Dl-IRW" firstAttribute="centerY" secondItem="hFJ-5W-GZM" secondAttribute="centerY" id="AMf-EQ-iOh"/>
+                        <constraint firstItem="nUl-6f-gKd" firstAttribute="leading" secondItem="hFJ-5W-GZM" secondAttribute="leading" constant="18" id="AYu-io-7bw"/>
+                        <constraint firstItem="nUl-6f-gKd" firstAttribute="centerY" secondItem="hFJ-5W-GZM" secondAttribute="centerY" id="C04-20-gp1"/>
+                        <constraint firstAttribute="height" constant="115" id="X76-ch-G9B"/>
+                        <constraint firstAttribute="trailing" secondItem="6XH-Dl-IRW" secondAttribute="trailing" constant="18" id="v9h-3m-qu2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hFJ-5W-GZM" secondAttribute="bottom" id="0k5-Vo-Edg"/>
+                <constraint firstItem="hFJ-5W-GZM" firstAttribute="top" secondItem="kuI-qS-UPN" secondAttribute="bottom" id="5Y4-6n-ch4"/>
+                <constraint firstAttribute="trailing" secondItem="kuI-qS-UPN" secondAttribute="trailing" id="MvK-gy-Rch"/>
+                <constraint firstItem="kuI-qS-UPN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WxY-uH-I94"/>
+                <constraint firstItem="hFJ-5W-GZM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ftd-Lg-54b"/>
+                <constraint firstItem="kuI-qS-UPN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="om0-VW-JKg"/>
+                <constraint firstAttribute="trailing" secondItem="hFJ-5W-GZM" secondAttribute="trailing" id="xsZ-UK-ulh"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="33.333333333333336" y="54.241071428571423"/>
+        </view>
+    </objects>
+</document>

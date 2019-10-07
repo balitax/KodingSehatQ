@@ -18,6 +18,17 @@ class SearchProductView: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     var filterProduct = [SearchProduct]()
     var isFilterActive = false
+    private var throttler: Throttler? = nil
+    
+    public var throttlingInterval: Int? = 0 {
+        didSet {
+            guard let interval = throttlingInterval else {
+                self.throttler = nil
+                return
+            }
+            self.throttler = Throttler(seconds: Int(interval))
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,7 +156,17 @@ extension SearchProductView:  UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchText.isEmpty {
             self.isFilterActive = true
-            self.filterProducts(for: searchText)
+            
+            guard let throttler = self.throttler else {
+                self.filterProducts(for: searchText)
+                return
+            }
+            throttler.throttle {
+                DispatchQueue.main.async {
+                     self.filterProducts(for: searchText)
+                }
+            }
+           
         }
     }
 
